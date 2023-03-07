@@ -54,11 +54,12 @@ def main():
             launcher_id = i + 1
 
     tasks = task_list(args[launcher_id:])
+    print(">>> Submitting jobs...")
     for task in tasks:
-        print(f"Submit {' '.join(task)}")
+        print(' '.join(task))
         subprocess.run(task, check=True)
 
-    print(f"Done!")
+    print(f">>> Submit {len(tasks)} jobs!")
 
 
 if __name__ == '__main__':
