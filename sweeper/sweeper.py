@@ -52,6 +52,9 @@ def main():
     for i, arg in enumerate(args):
         if arg == "--":
             launcher_id = i + 1
+            break
+
+        # todo: add --help or something
 
     tasks = task_list(args[launcher_id:])
     print(">>> Submitting jobs...")
